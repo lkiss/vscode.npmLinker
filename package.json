@@ -1,0 +1,68 @@
+{
+    "name": "obglinker",
+    "displayName": "obg-package-linker",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "Kisslac",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.obgLinkToTarget",
+        "onCommand:extension.obgRimrafTarget",
+        "onCommand:extension.obgInstallTarget"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.obgLinkToTarget",
+                "title": "Link project"
+            },
+            {
+                "command": "extension.obgRimrafTarget",
+                "title": "Clear Target Node Modules"
+            },
+            {
+                "command": "extension.obgInstallTarget",
+                "title": "Install Target Node Modules"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "extension.obgRimrafTarget",
+                    "group": "commands"
+                },
+                {
+                    "command": "extension.obgInstallTarget",
+                    "group": "commands"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "extension.obgLinkToTarget",
+                    "group": "commands",
+                    "when": "explorerResourceIsFolder"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
