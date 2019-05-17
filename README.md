@@ -4,11 +4,21 @@ Test
 
 ## Features
 
-Test
+Link selected package to the target.
+Run npm install on target package.
+Clear node_modules in target node_modules.
 
 ## Requirements
 
-Test
+Configuration must present in user settings.
+Use the following settings:
+"obg": {
+    "targetNodeModulesFolder": {
+        "nazgul": "Root path to the folder where the node_modules folder exist"
+    }
+}
+
+If this setting do not exist, error will be thrown.
 
 ## Extension Settings
 

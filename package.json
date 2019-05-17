@@ -1,6 +1,6 @@
 {
-    "name": "obglinker",
-    "displayName": "obg-package-linker",
+    "name": "npmlinker",
+    "displayName": "npm-package-linker",
     "description": "",
     "version": "0.0.1",
     "publisher": "Kisslac",
@@ -11,40 +11,40 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.obgLinkToTarget",
-        "onCommand:extension.obgRimrafTarget",
-        "onCommand:extension.obgInstallTarget"
+        "onCommand:extension.linkPackageToTarget",
+        "onCommand:extension.deleteTargetNodeModules",
+        "onCommand:extension.installTargetPackage"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.obgLinkToTarget",
+                "command": "extension.linkPackageToTarget",
                 "title": "Link project"
             },
             {
-                "command": "extension.obgRimrafTarget",
+                "command": "extension.deleteTargetNodeModules",
                 "title": "Clear Target Node Modules"
             },
             {
-                "command": "extension.obgInstallTarget",
+                "command": "extension.installTargetPackage",
                 "title": "Install Target Node Modules"
             }
         ],
         "menus": {
             "commandPalette": [
                 {
-                    "command": "extension.obgRimrafTarget",
+                    "command": "extension.deleteTargetNodeModules",
                     "group": "commands"
                 },
                 {
-                    "command": "extension.obgInstallTarget",
+                    "command": "extension.installTargetPackage",
                     "group": "commands"
                 }
             ],
             "explorer/context": [
                 {
-                    "command": "extension.obgLinkToTarget",
+                    "command": "extension.linkPackageToTarget",
                     "group": "commands",
                     "when": "explorerResourceIsFolder"
                 }
@@ -64,5 +64,6 @@
         "tslint": "^5.8.0",
         "@types/node": "^8.10.25",
         "@types/mocha": "^2.2.42"
-    }
+    },
+    "dependencies": {}
 }
