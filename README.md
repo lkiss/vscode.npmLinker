@@ -8,7 +8,7 @@ Link selected package to the target folder.
 Run npm install on target package.
 Clear node_modules in target node_modules.
 Scoped build.
-![Print Preferences](https://raw.githubusercontent.com/Microsoft/vscode-extension-samples/master/contentprovider-sample/preview.gif)
+![Print Preferences](https://github.com/lkiss/vscode.npmLinker/blob/master/images/scoped_build.gif)
 
 ## Requirements
 
