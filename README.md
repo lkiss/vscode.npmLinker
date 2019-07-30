@@ -1,6 +1,6 @@
 # obglinker README
 
-Test
+To let developers link their projects to another project within VScode.
 
 ## Features
 
@@ -37,11 +37,3 @@ If this setting do not exist, error will be thrown.
 ### 1.0.0
 
 Initial release of obg linker
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
