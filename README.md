@@ -34,6 +34,6 @@ If this setting do not exist, error will be thrown.
 ## Release Notes
 
 
-### 1.0.0
+### 0.0.2
 
 Initial release of obg linker
