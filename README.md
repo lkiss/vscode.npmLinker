@@ -14,11 +14,13 @@ Scoped build.
 
 Configuration must present in user settings.
 Use the following settings:
-```"obg": {
+```
+"obg": {
     "targetNodeModulesFolder": {
         "your_project_name": "Your root path to the folder where the node_modules folder exist"
     }
-}```
+}
+```
 
 If this setting do not exist, error will be thrown.
 
