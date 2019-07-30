@@ -39,6 +39,9 @@ If this setting do not exist, error will be thrown.
 
 ## Release Notes
 
+### 0.0.3
+
+Fix link cancellation when selecting from dropdown
 
 ### 0.0.2
 
