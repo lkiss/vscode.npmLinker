@@ -1,6 +1,10 @@
-# obglinker README
+# obglinker
 
 To let developers link their projects to another project within VScode.
+
+## Installation
+
+Use the vsix file from vsix folder.
 
 ## Features
 
