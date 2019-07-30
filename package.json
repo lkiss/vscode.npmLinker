@@ -3,6 +3,9 @@
     "displayName": "npm-package-linker",
     "description": "",
     "version": "0.0.2",
+    "repository": {
+        "url": "https://github.com/lkiss/vscode.npmLinker"
+    },
     "publisher": "Kisslac",
     "engines": {
         "vscode": "^1.27.0"
