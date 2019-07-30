@@ -15,11 +15,11 @@ export async function scopedBuildCommand(args: any) {
     const packageName = getPackageName(args.fsPath);
     const taskProvider = new ObgTaskProvider([scopedBuildTask(packageName)]);
     const providedTasks = await taskProvider.provideTasks();
-    const scopedBuild = providedTasks!.find(task => task.name === TaskName.OBG_SCOPED_BUILD);
+    const scopedBuild = providedTasks!.find((task: any) => task.name === TaskName.OBG_SCOPED_BUILD);
 
     await vscode.tasks.executeTask(scopedBuild!);
 
-    vscode.tasks.onDidEndTask(async task => {
+    vscode.tasks.onDidEndTask(async (task: any) => {
         task.execution.terminate();
     }, undefined, disposable);
 

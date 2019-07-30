@@ -17,7 +17,7 @@ export async function installTarget(args: any) {
     const targetNodeModulesFolder = configuration.get(`${CONFIGURATION_PROPERTY_PATH}`);
     const packageNames = Object.keys(targetNodeModulesFolder!);
 
-    await vscode.window.showQuickPick(packageNames, { canPickMany: false, onDidSelectItem: item => { targetProperty = item as string; } });
+    await vscode.window.showQuickPick(packageNames, { canPickMany: false, onDidSelectItem: (item: string) => { targetProperty = item as string; } });
 
     const targetFolder = configuration.get(`${CONFIGURATION_PROPERTY_PATH}.${targetProperty}`);
 
@@ -31,11 +31,11 @@ export async function installTarget(args: any) {
     const task = npmInstallTask(targetProperty, packageName);
     const taskProvider = new ObgTaskProvider([task]);
     const providedTasks = await taskProvider.provideTasks();
-    const installTask = providedTasks!.find(task => task.name === TaskName.OBG_LINK);
+    const installTask = providedTasks!.find((task: any) => task.name === TaskName.OBG_LINK);
 
     await vscode.tasks.executeTask(installTask!);
 
-    vscode.tasks.onDidEndTask(async task => {
+    vscode.tasks.onDidEndTask(async (task: any) => {
         task.execution.terminate();
     }, undefined, disposable);
 

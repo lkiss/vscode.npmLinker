@@ -5,8 +5,8 @@ Test
 ## Features
 
 Link selected package to the target folder.
-Run npm install on target package.
-Clear node_modules in target node_modules.
+![Print Preferences](https://github.com/lkiss/vscode.npmLinker/blob/master/images/link_project.gif)
+
 Scoped build.
 ![Print Preferences](https://github.com/lkiss/vscode.npmLinker/blob/master/images/scoped_build.gif)
 
@@ -14,11 +14,11 @@ Scoped build.
 
 Configuration must present in user settings.
 Use the following settings:
-"obg": {
+```"obg": {
     "targetNodeModulesFolder": {
-        "project_name": "Root path to the folder where the node_modules folder exist"
+        "your_project_name": "Your root path to the folder where the node_modules folder exist"
     }
-}
+}```
 
 If this setting do not exist, error will be thrown.
 
