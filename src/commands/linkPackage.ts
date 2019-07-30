@@ -19,7 +19,7 @@ export async function linkPackage(args: any) {
 
     await vscode.window.showQuickPick(packageNames, { canPickMany: false, onDidSelectItem: item => { targetProperty = item as string; } });
 
-    const targetFolder = configuration.get(`${CONFIGURATION_PROPERTY_PATH}.${targetProperty}`);
+    const targetFolder = configuration.get<string>(`${CONFIGURATION_PROPERTY_PATH}.${targetProperty}`);
 
     if (!targetFolder) {
         await vscode.window.showErrorMessage(`${targetProperty} path is not defined in configuration.`);
@@ -40,7 +40,7 @@ export async function linkPackage(args: any) {
 
     vscode.tasks.onDidEndTask(async task => {
         task.execution.terminate();
-
+        
         switch (task.execution.task.name) {
             case TaskName.OBG_DELETE_LINK: {
                 await vscode.tasks.executeTask(createLinkTask!);

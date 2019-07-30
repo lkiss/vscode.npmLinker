@@ -2,7 +2,7 @@
     "name": "npmlinker",
     "displayName": "npm-package-linker",
     "description": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "Kisslac",
     "engines": {
         "vscode": "^1.27.0"
@@ -13,7 +13,8 @@
     "activationEvents": [
         "onCommand:extension.linkPackageToTarget",
         "onCommand:extension.deleteTargetNodeModules",
-        "onCommand:extension.installTargetPackage"
+        "onCommand:extension.installTargetPackage",
+        "onCommand:extension.scopedBuildCommand"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -29,6 +30,10 @@
             {
                 "command": "extension.installTargetPackage",
                 "title": "Install Target Node Modules"
+            },
+            {
+                "command": "extension.scopedBuildCommand",
+                "title": "Scoped build"
             }
         ],
         "menus": {
@@ -45,6 +50,11 @@
             "explorer/context": [
                 {
                     "command": "extension.linkPackageToTarget",
+                    "group": "commands",
+                    "when": "explorerResourceIsFolder"
+                },
+                {
+                    "command": "extension.scopedBuildCommand",
                     "group": "commands",
                     "when": "explorerResourceIsFolder"
                 }

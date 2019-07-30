@@ -4,9 +4,11 @@ Test
 
 ## Features
 
-Link selected package to the target.
+Link selected package to the target folder.
 Run npm install on target package.
 Clear node_modules in target node_modules.
+Scoped build.
+![Print Preferences](https://raw.githubusercontent.com/Microsoft/vscode-extension-samples/master/contentprovider-sample/preview.gif)
 
 ## Requirements
 
@@ -14,7 +16,7 @@ Configuration must present in user settings.
 Use the following settings:
 "obg": {
     "targetNodeModulesFolder": {
-        "nazgul": "Root path to the folder where the node_modules folder exist"
+        "project_name": "Root path to the folder where the node_modules folder exist"
     }
 }
 
