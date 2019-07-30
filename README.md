@@ -26,6 +26,8 @@ Use the following settings:
 }
 ```
 
+The name of `your_project_name` will be used in the dropdown when you are linking.
+
 If this setting do not exist, error will be thrown.
 
 ## Extension Settings
